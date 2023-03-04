@@ -1,6 +1,6 @@
 let volToggle = "mute"; 
 let track = 0;
-let playPauseState = 'pause'; 
+let playPauseState = 'play'; 
 
 const Toast = Swal.mixin({
     toast: true,
@@ -57,6 +57,8 @@ $(document).ready(function () {
         }
 
       }, 5000);
+
+    //   $("#play_toggle_container").trigger('click');
 
 
     const audio = document.getElementById("myAudio");
