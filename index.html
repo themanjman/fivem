@@ -88,7 +88,7 @@
             </div>
           
             <div id="play_toggle_container" class="w-8 flex justify-center  rounded-full bg-white p-2 group hover:bg-purple-600 hover:text-white">
-                <i id="play_toggle" onclick="" class="group-hover:text-white text-purple-800 fa-solid fa-play"></i>
+                <i id="play_toggle" onclick="" class="group-hover:text-white text-purple-800 fa-solid fa-pause"></i>
             </div>
 
             <div id="skip_fwd_container" class="w-8 flex justify-center  rounded-full bg-white p-2 group hover:bg-purple-600 hover:text-white">
@@ -103,7 +103,9 @@
         </div>
     </div>
 
-    <audio id="myAudio" autoplay loop>
+
+
+    <audio id="myAudio" muted  preload autoplay class="absolute top-0">
         <source id="audioSource" src="./Assets/soundtrack.mp3" type="audio/mp3" />
         This text displays if the audio tag isn't supported.
     </audio>

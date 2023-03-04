@@ -1,6 +1,6 @@
 let volToggle = "mute"; 
 let track = 0;
-let playPauseState = 'play'; 
+let playPauseState = 'pause'; 
 
 const Toast = Swal.mixin({
     toast: true,
@@ -34,8 +34,9 @@ const tracks = [
 ];
 
 $(document).ready(function () {
-
+    
     let count = 0;
+    const audio = document.getElementById("myAudio");
 
     setInterval(function() {
         
@@ -58,11 +59,12 @@ $(document).ready(function () {
 
       }, 5000);
 
-    //   $("#play_toggle_container").trigger('click');
-
-
-    const audio = document.getElementById("myAudio");
+   
+    
+    
     audio.volume = 0.5;
+    audio.muted = false;
+
 
     let volume = document.querySelector("#steps-range");
 
@@ -84,6 +86,10 @@ $(document).ready(function () {
         e.preventDefault();
         skipFwd();
     });
+
+
+    // $("#play_toggle_container").trigger('click');
+
       
 });
 
